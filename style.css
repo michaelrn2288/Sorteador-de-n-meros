@@ -1,0 +1,115 @@
+:root {
+    --primaryColor: rgb(233, 255, 244);
+    --secondaryColor: rgb(155, 211, 188);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    grid-template-rows: auto auto;
+
+}
+
+body * {
+    text-align: center;
+    margin: 1em auto;
+    padding: 0 0.5em;
+    width:fit-content;
+    height:fit-content;
+    box-sizing: border-box;
+    position: relative;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#leftColumn {
+    display: inline-block;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    background: linear-gradient(to right, var(--secondaryColor), var(--primaryColor), var(--secondaryColor));
+    width:22px;
+    height:100%;
+    border-top: solid var(--secondaryColor) 0.2em;
+    border-bottom:solid var(--primaryColor) 0.2em;
+    border-radius: 0.3em;
+}
+
+#rightColumn {
+    display: inline-block;
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    background: linear-gradient(to right, var(--secondaryColor), var(--primaryColor), var(--secondaryColor));
+    width:22px;
+    height:100%;
+    border-top: solid var(--secondaryColor) 0.2em;
+    border-bottom:solid var(--primaryColor) 0.2em;
+    border-radius: 0.3em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+}
+
+h1 {
+    width:fit-content;
+    grid-column: 2;
+    text-shadow: var(--secondaryColor) 0.1em 0.1em 0.2em;
+}
+
+section {
+    border: 0.6em solid rgba(0,0,0,0.1);
+    border-radius: 1em;
+    background: radial-gradient(white, var(--primaryColor))
+}
+
+section > * {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    padding: 0;
+}
+
+.inputLabelPair {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+input {
+    width: 4em;
+    margin-left: 1em;
+}
+
+button {
+    margin: 0 auto;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.66em 2em;
+    background: var(--primaryColor)
+}
+
+button:hover {
+    cursor:pointer;
+    background: linear-gradient(var(--secondaryColor), var(--primaryColor), var(--secondaryColor));
+}
+
+#result {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 40em;
+    grid-column: 2;
+}
+
+#result > * {
+    min-width: 6em;
+    background: radial-gradient(var(--primaryColor), var(--secondaryColor));
+    border: 0.6em solid rgba(0,0,0,0.25)
+}

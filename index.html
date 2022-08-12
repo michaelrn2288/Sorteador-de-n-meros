@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador de números</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Sorteador de números</h1>
+    <div id="leftColumn"></div>
+    <div id="rightColumn"></div>
+    <main>
+        <section>
+            <h2>Escolha um número mínimo maior do que 0 e um número máximo até 200</h2>
+            <p>Serão sorteados vários números entre os números escolhidos.<br>
+                O Sorteio terá fim quando o número 10 for obtido.
+            </p>
+            <form>
+                <div class="inputLabelPair">
+                    <label for="minNumber">número mínimo: </label>
+                    <input id="minNumber" name="minNumber">
+                </div>
+                <div class="inputLabelPair">
+                    <label for="maxNumber">número máximo: </label>
+                    <input id="maxNumber" name="maxNumber">
+                </div>
+                <button type="button" onclick="getResult()">Sortear</button>
+            </form>
+        </section>
+    </main>
+    <div id="result"></div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
