@@ -8,7 +8,7 @@ function getResult() {
 
     function validateInputs() {
         if (!minNumber || !maxNumber) {
-            return 'insira apenas números positivos'
+            return 'preencha ambos os campos com números positivos apenas'
         } else if (minNumber >= maxNumber) {
             return 'o número mínimo deve ser menor do que o máximo'
         } else if (minNumber >= 10) {
@@ -49,6 +49,6 @@ function getResult() {
             createDivResult(number)
         }
     }
-    
+
     renderResult()
 }
